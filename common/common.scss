@@ -251,20 +251,20 @@ div.ac-wrap {
 @keyframes wave-animation {
   0% {
     transform: translateX(0) rotate(3deg);
-    clip-path: ellipse(150% 70% at 90% -15%);
+    clip-path: ellipse(150% 82% at 90% -10%);
   }
   25% {
-    clip-path: ellipse(168% 62% at 90% -15%);
+    clip-path: ellipse(168% 74% at 90% -10%);
   }
   50% {
-    clip-path: ellipse(145% 78% at 90% -15%);
+    clip-path: ellipse(145% 90% at 90% -10%);
   }
   75% {
-    clip-path: ellipse(162% 65% at 90% -15%);
+    clip-path: ellipse(162% 78% at 90% -10%);
   }
   100% {
     transform: translateX(-50%) rotate(-3deg);
-    clip-path: ellipse(150% 70% at 90% -15%);
+    clip-path: ellipse(150% 82% at 90% -10%);
   }
 }
 
@@ -281,9 +281,9 @@ html {
 
   .background-container {
     position: fixed;
-    top: 0;
+    top: -15vh;
     left: 0;
-    height: 100vh;
+    height: 130vh;
     width: 200vw;
     background: linear-gradient(
       90deg,
@@ -291,8 +291,8 @@ html {
       var(--tertiary) 50%,
       var(--tertiary-hover) 100%
     );
-    clip-path: ellipse(150% 70% at 90% -15%);
-    animation: wave-animation 25s ease-in-out infinite alternate;
+    clip-path: ellipse(150% 82% at 90% -10%);
+    animation: wave-animation 32s cubic-bezier(0.37, 0, 0.63, 1) infinite alternate;
   }
 
   body.no-ember .background-container {
