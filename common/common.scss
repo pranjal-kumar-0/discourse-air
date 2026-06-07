@@ -250,13 +250,13 @@ div.ac-wrap {
 
 @keyframes wave-animation {
   0% {
-    clip-path: ellipse(150% 70% at 90% -15%);
+    background-position: 0% 50%;
   }
   50% {
-    clip-path: ellipse(160% 75% at 85% -12%);
+    background-position: 100% 50%;
   }
   100% {
-    clip-path: ellipse(150% 70% at 90% -15%);
+    background-position: 0% 50%;
   }
 }
 
@@ -280,8 +280,10 @@ html {
     background: linear-gradient(
       90deg,
       var(--tertiary-hover) 0%,
-      var(--tertiary) 100%
+      var(--tertiary) 50%,
+      var(--tertiary-hover) 100%
     );
+    background-size: 200% 200%;
     clip-path: ellipse(150% 70% at 90% -15%);
     animation: wave-animation 10s ease-in-out infinite;
   }
