@@ -248,6 +248,16 @@ div.ac-wrap {
   border-left-color: var(--tertiary);
 }
 
+@keyframes wave-animation {
+  0%,
+  100% {
+    clip-path: ellipse(148% 70% at 91% -14%);
+  }
+  50% {
+    clip-path: ellipse(160% 80% at 85% -10%);
+  }
+}
+
 html {
   body:not(.no-ember) {
     background:
@@ -271,6 +281,7 @@ html {
       var(--tertiary) 100%
     );
     clip-path: ellipse(148% 70% at 91% -14%);
+    animation: wave-animation 20s ease-in-out infinite;
   }
 
   body.no-ember .background-container {
@@ -589,6 +600,7 @@ html body #main-outlet {
       var(--tertiary) 100%
     );
     clip-path: ellipse(148% 70% at 91% -14%);
+    animation: wave-animation 20s ease-in-out infinite;
     content: "";
     width: 100%;
     height: 100%;
