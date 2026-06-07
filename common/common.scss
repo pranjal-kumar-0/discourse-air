@@ -250,13 +250,13 @@ div.ac-wrap {
 
 @keyframes wave-animation {
   0% {
-    transform: translateX(0);
+    clip-path: ellipse(150% 70% at 90% -15%);
   }
   50% {
-    transform: translateX(-25%);
+    clip-path: ellipse(160% 75% at 85% -12%);
   }
   100% {
-    transform: translateX(0);
+    clip-path: ellipse(150% 70% at 90% -15%);
   }
 }
 
@@ -280,11 +280,10 @@ html {
     background: linear-gradient(
       90deg,
       var(--tertiary-hover) 0%,
-      var(--tertiary) 50%,
-      var(--tertiary-hover) 100%
+      var(--tertiary) 100%
     );
-    background-size: 200% 200%;
-    clip-path: ellipse(148% 70% at 91% -14%);
+    clip-path: ellipse(150% 70% at 90% -15%);
+    animation: wave-animation 10s ease-in-out infinite;
   }
 
   body.no-ember .background-container {
