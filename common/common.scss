@@ -250,10 +250,10 @@ div.ac-wrap {
 
 @keyframes wave-animation {
   0% {
-    background-position: 0% 50%;
+    transform: translateX(0);
   }
   100% {
-    background-position: 200% 50%;
+    transform: translateX(-50%);
   }
 }
 
@@ -273,15 +273,28 @@ html {
     top: 0;
     left: 0;
     height: 100vh;
-    width: 200vw;
-    background: linear-gradient(
-      90deg,
-      var(--tertiary-hover) 0%,
-      var(--tertiary) 50%,
-      var(--tertiary-hover) 100%
-    );
+    width: 100vw;
     clip-path: ellipse(150% 70% at 90% -15%);
-    animation: wave-animation 10s linear infinite;
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 200%;
+      background: linear-gradient(
+        90deg,
+        var(--tertiary-hover) 0%,
+        var(--tertiary) 25%,
+        var(--tertiary-hover) 50%,
+        var(--tertiary) 75%,
+        var(--tertiary-hover) 100%
+      );
+      animation: wave-animation 10s linear infinite;
+    }
   }
 
   body.no-ember .background-container {
