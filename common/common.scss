@@ -251,37 +251,18 @@ div.ac-wrap {
 @keyframes wave-animation {
   0% {
     transform: translateX(0);
-    clip-path: ellipse(150% 70% at 90% -15%);
-  }
-  25% {
-    clip-path: ellipse(172% 58% at 87% -24%);
-  }
-  50% {
-    clip-path: ellipse(158% 74% at 92% -10%);
-  }
-  75% {
-    clip-path: ellipse(135% 80% at 94% -5%);
   }
   100% {
     transform: translateX(-50%);
-    clip-path: ellipse(150% 70% at 90% -15%);
   }
 }
 
 @keyframes wave-animation-2 {
   0% {
-    transform: translateX(0);
-    clip-path: ellipse(120% 50% at 80% -30%);
-  }
-  33% {
-    clip-path: ellipse(138% 42% at 77% -38%);
-  }
-  66% {
-    clip-path: ellipse(110% 56% at 83% -22%);
+    transform: translateX(-5%);
   }
   100% {
-    transform: translateX(-50%);
-    clip-path: ellipse(120% 50% at 80% -30%);
+    transform: translateX(-45%);
   }
 }
 
@@ -309,7 +290,7 @@ html {
       var(--tertiary-hover) 100%
     );
     clip-path: ellipse(150% 70% at 90% -15%);
-    animation: wave-animation 10s ease-in-out infinite alternate;
+    animation: wave-animation 20s ease-in-out infinite alternate;
   }
 
   .background-container::after {
@@ -325,9 +306,9 @@ html {
       var(--tertiary-hover) 50%,
       var(--tertiary) 100%
     );
-    opacity: 0.5;
-    clip-path: ellipse(120% 50% at 80% -30%);
-    animation: wave-animation-2 14s ease-in-out infinite alternate-reverse;
+    opacity: 0.45;
+    clip-path: ellipse(130% 60% at 85% -25%);
+    animation: wave-animation-2 30s ease-in-out infinite alternate-reverse;
   }
 
   body.no-ember .background-container {
