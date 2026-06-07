@@ -276,25 +276,25 @@ html {
     width: 100vw;
     clip-path: ellipse(150% 70% at 90% -15%);
     overflow: hidden;
+  }
 
-    &::before {
-      content: "";
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 200%;
-      background: linear-gradient(
-        90deg,
-        var(--tertiary-hover) 0%,
-        var(--tertiary) 25%,
-        var(--tertiary-hover) 50%,
-        var(--tertiary) 75%,
-        var(--tertiary-hover) 100%
-      );
-      animation: wave-animation 10s linear infinite;
-    }
+  .background-container::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 200%;
+    background: linear-gradient(
+      90deg,
+      var(--tertiary-hover) 0%,
+      var(--tertiary) 25%,
+      var(--tertiary-hover) 50%,
+      var(--tertiary) 75%,
+      var(--tertiary-hover) 100%
+    );
+    animation: wave-animation 10s linear infinite;
   }
 
   body.no-ember .background-container {
